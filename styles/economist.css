@@ -1,0 +1,180 @@
+@font-face { /* 定义自定义字体 */
+    font-family: 'SimSun'; /* 定义字体族名称 */
+    src: url('fonts/SimSun.ttf') format('truetype'); /* 指定字体文件及其格式 */
+}
+
+body { /* 全局样式 */
+    font-size: 15px; /* 设置全局字体大小 */
+    color: #333; /* 设置全局字体颜色 */
+    background: #fff; /* 设置全局背景颜色 */
+    font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif"; /* 定义全局字体族 */
+    margin: 0; /* 设置全局外边距为0 */
+    padding: 10%; /* 设置全局内边距为10% */
+}
+
+p { /* 段落样式 */
+    font-family: 'SimSun', '宋体', serif; /* 设置段落字体族 */
+    margin: 0 0 20px; /* 设置段落底部外边距为20px */
+    padding: 0; /* 设置段落内边距为0 */
+    line-height: 1.8; /* 设置段落行高 */
+}
+
+h1 { /* 一级标题样式 */
+    font-size: 2.2em; /* 设置一级标题字体大小 */
+    font-weight: 700; /* 设置一级标题字体粗细 */
+    line-height: 1.1; /* 设置一级标题行高 */
+    padding-top: 16px; /* 设置一级标题顶部内边距 */
+    margin-bottom: 4px; /* 设置一级标题底部外边距 */
+}
+
+h2, h3, h4, h5, h6 { /* 标题通用样式 */
+    line-height: 1.5em; /* 设置标题行高 */
+    margin-top: 2.2em; /* 设置标题顶部外边距 */
+    margin-bottom: 4px; /* 设置标题底部外边距 */
+}
+
+h2 { /* 二级标题样式 */
+    font-size: 1.4em; /* 设置二级标题字体大小 */
+    margin: 40px 10px 20px 0; /* 设置二级标题外边距 */
+    padding-left: 9px; /* 设置二级标题左内边距 */
+    font-weight: 700; /* 设置二级标题字体粗细 */
+    line-height: 1.4; /* 设置二级标题行高 */
+}
+
+h3 { /* 三级标题样式 */
+    font-weight: 700; /* 设置三级标题字体粗细 */
+    font-size: 1.2em; /* 设置三级标题字体大小 */
+    line-height: 1.4; /* 设置三级标题行高 */
+    margin: 10px 0 5px; /* 设置三级标题外边距 */
+    padding-top: 10px; /* 设置三级标题顶部内边距 */
+}
+
+h4 { /* 四级标题样式 */
+    font-weight: 700; /* 设置四级标题字体粗细 */
+    text-transform: uppercase; /* 设置四级标题文本为大写 */
+    font-size: 1.1em; /* 设置四级标题字体大小 */
+    line-height: 1.4; /* 设置四级标题行高 */
+    margin: 10px 0 5px; /* 设置四级标题外边距 */
+    padding-top: 10px; /* 设置四级标题顶部内边距 */
+}
+
+h5, h6 { /* 五级和六级标题通用样式 */
+    font-size: .9em; /* 设置五级和六级标题字体大小 */
+}
+
+h5 { /* 五级标题样式 */
+    font-weight: bold; /* 设置五级标题字体粗细 */
+    text-transform: uppercase; /* 设置五级标题文本为大写 */
+}
+
+h6 { /* 六级标题样式 */
+    font-weight: normal; /* 设置六级标题字体粗细 */
+}
+
+img { /* 图片样式 */
+    border-radius: 5px; /* 设置图片圆角半径 */
+    display: block; /* 设置图片为块级元素 */
+    margin-bottom: 15px; /* 设置图片底部外边距 */
+    height: auto; /* 设置图片高度自适应 */
+}
+
+dl, ol, ul { /* 列表样式 */
+    margin-top: 12px; /* 设置列表顶部外边距 */
+    margin-bottom: 20px; /* 设置列表底部外边距 */
+    padding-left: 5%; /* 设置列表左内边距 */
+    line-height: 1.8; /* 设置列表行高 */
+}
+
+a { /* 链接样式 */
+    color: #D1771B; /* 设置链接颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+}
+
+a:hover { /* 链接悬停样式 */
+    color: #A15A13; /* 设置链接悬停颜色 */
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+a:focus { /* 链接聚焦样式 */
+    outline-offset: -2px; /* 设置链接聚焦时的轮廓偏移 */
+}
+
+blockquote { /* 引用样式 */
+    font-size: 1em; /* 设置引用字体大小 */
+    font-style: normal; /* 设置引用字体样式 */
+    padding: 4px 0; /* 设置引用内边距 */
+    margin: 0 0 15px; /* 设置引用外边距 */
+    position: relative; /* 设置引用定位方式 */
+    line-height: 1.8; /* 设置引用行高 */
+    text-indent: 0; /* 设置引用首行缩进 */
+    border: none; /* 移除引用边框 */
+}
+
+strong, dfn { /* 加粗和定义标签样式 */
+    font-weight: 700; /* 设置加粗和定义标签的字体粗细 */
+}
+
+em, dfn { /* 斜体和定义标签样式 */
+    font-style: italic; /* 设置斜体和定义标签的字体样式 */
+    font-weight: 400; /* 设置斜体和定义标签的字体粗细 */
+}
+
+del { /* 删除线样式 */
+    text-decoration: line-through; /* 设置删除线样式 */
+}
+
+pre { /* 预格式文本样式 */
+    margin: 0 0 10px; /* 设置预格式文本外边距 */
+    font-size: 13px; /* 设置预格式文本字体大小 */
+    line-height: 1.42857; /* 设置预格式文本行高 */
+    word-break: break-all; /* 设置单词换行方式 */
+    word-wrap: break-word; /* 设置单词换行方式 */
+    border-radius: 4px; /* 设置预格式文本圆角半径 */
+    white-space: pre-wrap; /* 设置预格式文本的空白处理 */
+    display: block; /* 设置预格式文本为块级元素 */
+    background: #f8f8f8; /* 设置预格式文本背景颜色 */
+    padding: 10px 20px; /* 设置预格式文本内边距 */
+    border: none; /* 移除预格式文本边框 */
+    margin-bottom: 25px; /* 设置预格式文本底部外边距 */
+    color: #666; /* 设置预格式文本字体颜色 */
+    font-family: Courier, sans-serif; /* 设置预格式文本字体族 */
+}
+
+code { /* 代码样式 */
+    color: #c7254e; /* 设置代码字体颜色 */
+    background-color: #f9f2f4; /* 设置代码背景颜色 */
+    border-radius: 4px; /* 设置代码圆角半径 */
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace; /* 设置代码字体族 */
+    padding: 2px 4px; /* 设置代码内边距 */
+    font-size: 90%; /* 设置代码字体大小 */
+}
+
+p>code { /* 段落内代码样式 */
+    color: #c7264e; /* 设置段落内代码字体颜色 */
+    background-color: #f9f2f4; /* 设置段落内代码背景颜色 */
+    font-size: .95em; /* 设置段落内代码字体大小 */
+    border-radius: 3px; /* 设置段落内代码圆角半径 */
+    -moz-border-radius: 3px; /* 设置段落内代码圆角半径 (Mozilla) */
+    -webkit-border-radius: 3px; /* 设置段落内代码圆角半径 (Webkit) */
+}
+
+figure { /* 图像样式 */
+    margin: 1em 0; /* 设置图像外边距 */
+}
+
+figcaption { /* 图像标题样式 */
+    font-size: 0.75em; /* 设置图像标题字体大小 */
+    padding: 0.5em 2em; /* 设置图像标题内边距 */
+    margin-bottom: 2em; /* 设置图像标题底部外边距 */
+}
+
+figure img { /* 图像内图片样式 */
+    margin-bottom: 0px; /* 设置图像底部外边距 */
+}
+
+hr { /* 水平线样式 */
+    margin-top: 20px; /* 设置水平线顶部外边距 */
+    margin-bottom: 20px; /* 设置水平线底部外边距 */
+    border: 0; /* 移除水平线边框 */
+    border-top: 1px solid #eee; /* 设置水平线上边框 */
+}
