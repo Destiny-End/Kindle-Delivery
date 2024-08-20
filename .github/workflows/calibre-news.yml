@@ -25,6 +25,7 @@ jobs:
       secret: ${{ secrets.SECRET }}
       from: ${{ secrets.FROM }}
       to: ${{ secrets.TO }}
+      toto: ${{ secrets.TO2 }}
       ext: ${{ secrets.FORMAT || 'epub' }}
       size: ${{ secrets.SIZE || 25 }}
     steps:
@@ -138,6 +139,11 @@ jobs:
             calibre-smtp -a "$ebook_path" -r "$relay" --port="$port" \
               -e "${encrypt^^}" -u "$from" -p "$secret" -s "$title" \
               "$from" "$to" "Deliver \"${title}\""
+          done < <(find "$output" -type f -name "*.${ext,,}" -print0)
+            echo "Sending: \"$filename\" to email2"
+            calibre-smtp -a "$ebook_path" -r "$relay" --port="$port" \
+              -e "${encrypt^^}" -u "$from" -p "$secret" -s "$title" \
+              "$from" "$toto" "Deliver \"${title}\""
           done < <(find "$output" -type f -name "*.${ext,,}" -print0)
           echo "All jobs done"
       - name: Storing Ebook
