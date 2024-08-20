@@ -134,26 +134,10 @@ jobs:
               echo "Size exceeds the limitation: $filename (${file_size}MB)"
               continue
             fi
-            echo "Sending: \"$filename\" to email1"
+            echo "Sending: \"$filename\" to email"
             calibre-smtp -a "$ebook_path" -r "$relay" --port="$port" \
               -e "${encrypt^^}" -u "$from" -p "$secret" -s "$title" \
               "$from" "$to" "Deliver \"${title}\""
-          done < <(find "$output" -type f -name "*.${ext,,}" -print0)
-      - name: Sending Ebook 2
-        if: ${{ success() }}
-        run: |
-          while read -d '' ebook_path; do
-            filename="$(basename "$ebook_path")"
-            title="${filename%.*}"
-            file_size=$(du -m "$ebook_path" | cut -f 1)
-            if [ $file_size -ge $size ]; then
-              echo "Size exceeds the limitation: $filename (${file_size}MB)"
-              continue
-            fi
-            echo "Sending: \"$filename\" to email1"
-            calibre-smtp -a "$ebook_path" -r "$relay" --port="$port" \
-              -e "${encrypt^^}" -u "$from" -p "$secret" -s "$title" \
-              "$from" "$to2" "Deliver \"${title}\""
           done < <(find "$output" -type f -name "*.${ext,,}" -print0)
           echo "All jobs done"
       - name: Storing Ebook
